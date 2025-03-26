@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te Amo 💖</title>
+    <link rel="stylesheet" href="cupones.css">
+    <style>
+        /* Estilo para el título de los cupones */
+        .cupones-titulo {
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 20px;
+            color: #1E90FF; /* Azul */
+        }
+
+        /* Estilo para las tarjetas de los cupones */
+        .cupon-card h2 {
+            color: #1E90FF; /* Azul */
+        }
+    </style>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        Cargando...
+        <div class="heart-container">
+            <span class="Particle_heart">♥</span>
+            <span class="Particle_heart">♥</span>
+            <span class="Particle_heart">♥</span>
+            <span class="Particle_heart">♥</span>
+        </div>
+    </div>
+
+    <!-- Menú de navegación fijo -->
+    <nav class="navbar">
+        <!-- Logo como botón -->
+        <div class="logo">
+            <a href="pregunta.html" class="logo-btn">
+                <img src="imagenes/logo.png" alt="Logo" />
+            </a>
+        </div>
+
+        <div class="menu-toggle" id="mobile-menu">
+            ☰
+        </div>
+        
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Tiempo</a></li>
+            <li><a href="historia.html">Nosotros</a></li>
+            <li><a href="razones.html">Razones</a></li>
+            <li><a href="cupones.html">Cupones</a></li>
+        </ul>
+    </nav>
+
+    <!-- Título de los cupones -->
+    <div class="cupones-titulo">
+        <h1>Cupones</h1>
+    </div>
+
+    <div class="cupon-container">
+        <!-- Cupón 1 -->
+        <div class="cupon-card">
+            <h2>"Elimina tu mal humor"</h2>
+            <p>Este cupón te permite eliminar cualquier enfado o mal humor de inmediato. ¡Solo necesito una sonrisa y un abrazo!</p>
+        </div>
+
+        <!-- Cupón 2 -->
+        <div class="cupon-card">
+            <h2>"Todo lo que quieras... ¡excepto mi comida!"</h2>
+            <p>Este cupón te da derecho a pedirme cualquier cosa que quieras... ¡Menos mi última rebanada de pizza!</p>
+        </div>
+
+        <!-- Cupón 3 -->
+        <div class="cupon-card">
+            <h2>"Ser tu camarero/a"</h2>
+            <p>Este cupón te convierte en el cliente VIP de mi servicio de camarero/a. ¡Todo lo que pidas, lo obtienes!</p>
+        </div>
+
+        <!-- Cupón 4 -->
+        <div class="cupon-card">
+            <h2>"Selfie locos juntos"</h2>
+            <p>Este cupón te permite una sesión de selfies locos conmigo. ¡Te prometo que las fotos serán épicas (¡y graciosas!)</p>
+        </div>
+
+        <!-- Cupón 5 -->
+        <div class="cupon-card">
+            <h2>"Noche de contar chistes malos"</h2>
+            <p>Este cupón te da derecho a una noche de contar los peores chistes posibles, ¡y yo me comprometo a reírme (aunque sea por compromiso)!</p>
+        </div>
+
+        <!-- Cupón 6 -->
+        <div class="cupon-card">
+            <h2>"Te hago un masaje"</h2>
+            <p>Este cupón te da derecho a un masaje de relajación total. Yo seré el masajista y tú solo disfruta.</p>
+        </div>
+
+        <!-- Cupón 7 -->
+        <div class="cupon-card">
+            <h2>"Dime Cosas Bonitas por 1 Minuto"</h2>
+            <p>Este cupón te otorga un minuto completo de palabras hermosas y dulces solo para ti. Durante 60 segundos, haré que te sientas el ser más especial del mundo, porque eres increíble y te mereces escuchar cosas bonitas. ¡Prepárate para sonrojarte de felicidad!</p>
+        </div>
+    </div>
+
+    <div id="popup" style="display: none;">
+        <div class="popup-content">
+            <p>Para que funcione los cupones debes mostrárselos en el momento a la otra persona o mandar captura si están lejos.</p>
+            <button onclick="closePopup()">Cerrar</button>
+        </div>
+    </div>
+
+    <script>
+        // Función para cerrar el popup
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+
+        // Mostrar el comunicado al cargar la página
+        window.onload = function() {
+            // Mostrar el popup después de cargar la página
+            document.getElementById("popup").style.display = "flex";
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

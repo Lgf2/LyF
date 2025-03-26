@@ -1,0 +1,73 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te Amo 💖</title>
+    <link rel="stylesheet" href="stylesshistoria.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        Cargando...
+        <div class="heart-container">
+            <span class="Particle_heart">♥</span>
+            <span class="Particle_heart">♥</span>
+            <span class="Particle_heart">♥</span>
+            <span class="Particle_heart">♥</span>
+        </div>
+    </div>
+
+    <!-- Menú de navegación fijo -->
+    <nav class="navbar">
+        <!-- Logo como botón -->
+        <div class="logo">
+            <a href="pregunta.html" class="logo-btn">
+                <img src="imagenes/logo.png" alt="Logo" />
+            </a>
+        </div>
+
+        <div class="menu-toggle" id="mobile-menu">
+            ☰
+        </div>
+        
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Tiempo</a></li>
+            <li><a href="historia.html">Nosotros</a></li>
+            <li><a href="razones.html">Razones</a></li>
+            <li><a href="cupones.html">Cupones</a></li>
+        </ul>
+    </nav>
+
+     <!-- Sección Razones por las que te amo -->
+     <section id="teamo">
+        <h2>Yo solo quería fresas con crema</h2>
+        <div class="card-container">
+            <!-- Tarjetas con imágenes -->
+            <div class="reason-card" onclick="showText('texto1')">
+                <img src="imagenes/imagen1.jpg" alt="Imagen 1">
+                <div class="card-overlay"></div>
+            </div>
+            <div class="reason-card" onclick="showText('texto2')">
+                <img src="imagenes/imagen3.jpeg" alt="Imagen 2">
+                <div class="card-overlay"></div>
+            </div>
+            <div class="reason-card" onclick="showText('texto3')">
+                <img src="imagenes/imagen2.jpg" alt="Imagen 3">
+                <div class="card-overlay"></div>
+            </div>
+        </div>
+        <!-- Área para mostrar el texto -->
+        <div id="texto" class="text-container">
+            <p id="texto1" class="reason-text">Pensar que hemos vivido a tan solo una cuadra de distancia durante casi 20 años, cruzándonos sin saber nada el uno del otro. Todo comenzó con unas simples fresas con crema, y ahora me encuentro pensando en ti constantemente, como si todo lo que había vivido antes hubiera sido solo para llegar a este momento. A veces me pregunto cómo no te había conocido antes, porque ahora que lo hago, no puedo dejar de pensar en ti ni por un segundo.</p>
+            <p id="texto2" class="reason-text">Unos simples cócteles, la excusa perfecta para que no me digas que no a la salida. Fue ese momento en el que más intriga me dio por conocerte, cuando empecé a darme cuenta de lo especial que eras, sin saber aún todo lo que nos esperaba. Esa noche, aunque parecía casual, marcó el comienzo de algo mucho más grande de lo que imaginaba.</p>
+            <p id="texto3" class="reason-text">Tu risa es mi melodía favorita. Incluso cuando me dices que duermes feo... aunque, honestamente, creo que esa foto te hace ver más como una obra de arte abstracto que alguien durmiendo mal. ¡Esas caras son impagables!</p>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

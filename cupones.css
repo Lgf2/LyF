@@ -1,0 +1,211 @@
+/* Estilo general para la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+/* Loader */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4D89E3; /* Azul brillante */
+    z-index: 9999;
+}
+/* Estilo del título de los cupones */
+.cupones-titulo {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 45px;
+    color: #1E90FF; /* Azul */
+    margin-bottom: 30px;
+    padding-top: 10px;
+}
+
+/* Estilo para el contenedor de cupones */
+.cupon-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo de las tarjetas de los cupones */
+.cupon-card {
+    background-color: white;
+    border: 2px solid #1E90FF; /* Borde azul */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cupon-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cupon-card h2 {
+    color: #1E90FF; /* Azul */
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.cupon-card p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Estilo del popup */
+#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content p {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.popup-content button {
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.popup-content button:hover {
+    background-color: #1c7ed6;
+}
+
+/* Menú de navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #4D89E3;
+    border-bottom: 2px solid #ddd;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    padding: 10px 20px;
+    float: left;
+}
+
+.navbar .logo img {
+    height: 40px;
+}
+/* Navbar */
+.navbar {
+    background: #4D89E3; /* Azul brillante tipo Stitch */
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Menú Toggle */
+.menu-toggle {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    margin-right: 20px; /* Añadir margen derecho para que no quede pegado */
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #BB86FC; /* Morado claro tipo Stitch */
+}
+
+
+
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Muestra el botón ☰ */
+        margin-right: 64px;
+    }
+
+    .nav-links {
+        display: none; /* Oculta el menú */
+        flex-direction: column;
+        background: #4D89E3; /* Azul brillante tipo Stitch */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 250px;
+        padding: 15px 0;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .nav-links.show {
+        display: flex; /* Muestra el menú cuando se activa */
+    }
+
+    /* Hacer el logo más pequeño en pantallas pequeñas */
+    .logo img {
+        max-width: 50px; /* Tamaño más pequeño del logo en pantallas pequeñas */
+    }
+}

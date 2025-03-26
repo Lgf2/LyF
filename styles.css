@@ -1,0 +1,206 @@
+/* Estilo general */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E3F2FD; /* Azul claro */
+    color: #2C3E50; /* Azul oscuro */
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Loader */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4D89E3; /* Azul brillante */
+    z-index: 9999;
+}
+
+.heart-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.Particle_heart {
+    font-size: 28px;
+    color: #4D89E3; /* Azul brillante */
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.6; }
+}
+
+/* Hero */
+.hero {
+    background-image: url(imagenes/img.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.hero .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #FF80AB; /* Rosa claro tipo Stitch */
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgba(255, 128, 171, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.hero .btn:hover {
+    transform: scale(1.1);
+    background: #FF4D6D; /* Rosa brillante tipo Stitch */
+}
+
+/* Logo */
+.logo img {
+    max-width: 100px; /* Ajusta el tamaño máximo que desees */
+    height: auto; /* Mantiene la relación de aspecto */
+}
+
+/* Navbar */
+.navbar {
+    background: #4D89E3; /* Azul brillante tipo Stitch */
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Menú Toggle */
+.menu-toggle {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    margin-right: 20px; /* Añadir margen derecho para que no quede pegado */
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #BB86FC; /* Morado claro tipo Stitch */
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Muestra el botón ☰ */
+        margin-right: 64px;
+    }
+
+    .nav-links {
+        display: none; /* Oculta el menú */
+        flex-direction: column;
+        background: #4D89E3; /* Azul brillante tipo Stitch */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 250px;
+        padding: 15px 0;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.show {
+        display: flex; /* Muestra el menú cuando se activa */
+    }
+
+    /* Hacer el logo más pequeño en pantallas pequeñas */
+    .logo img {
+        max-width: 50px; /* Tamaño más pequeño del logo en pantallas pequeñas */
+    }
+}
+
+/* Secciones */
+section {
+    padding: 60px;
+    background: white;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: #4D89E3; /* Azul brillante tipo Stitch */
+}
+
+/* Footer */
+footer {
+    background: #4D89E3; /* Azul brillante tipo Stitch */
+    color: white;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#countdown {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
