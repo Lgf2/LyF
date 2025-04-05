@@ -46,7 +46,7 @@ body {
 
 /* Hero */
 .hero {
-    background-image: url(imagenes/img.jpeg);
+    background-image: url(imagenes/img.png);
     background-size: cover;
     background-position: center;
     height: 100vh;
